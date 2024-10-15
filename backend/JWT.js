@@ -53,7 +53,7 @@ const getJWT = async(userData, secret) => {
     
     //create payload
     const payload = {
-        iss: 'habit_tracking',    //name of the server that issued the token
+        iss: 'messaging',    //name of the server that issued the token
         exp: 60*60*24,      // sets to expire in 24hours
 
         //user data
