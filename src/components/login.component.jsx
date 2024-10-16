@@ -64,10 +64,17 @@ function Login() {
         })
         .then(res => res.json());
 
-        console.log("does this run?", userData);
-        setReturnedData(userData);
 
-        getJWT(userData);
+        console.log("does this run?", userData);
+        if (userData.length === 0) {
+            console.log("No user found with those credentials")
+        } else {
+            setReturnedData(userData);
+
+            getJWT(userData);
+        }
+        
+        
     }
 
     const cookies = new Cookies();
