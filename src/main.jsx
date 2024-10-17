@@ -9,9 +9,12 @@ import Home from './components/home.component.jsx';
 import Login from './components/login.component.jsx';
 import SignUp from './components/signup.component.jsx';
 
+import MenuAppBar from './components/menuBar.component.jsx';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <> 
       <React.StrictMode>
+        <MenuAppBar/>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />}/>
