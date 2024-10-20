@@ -30,7 +30,7 @@ function Login() {
         console.log(loggedInUser);
         if (loggedInUser) {
             console.log("User is logged in");
-            //navigate("/LoggedIn", {relative: "path"})
+            navigate("/Messages", {relative: "path"})
         } else {
             console.log("No user is logged in");
         }

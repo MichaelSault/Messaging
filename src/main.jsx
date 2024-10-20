@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/home.component.jsx';
 import Login from './components/login.component.jsx';
 import SignUp from './components/signup.component.jsx';
+import Messages from './components/messages.component.jsx';
 
 import MenuAppBar from './components/menuBar.component.jsx';
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/' element={<Home />}/>
             <Route path='/Login' element={<Login />}/>
             <Route path='/SignUp' element={<SignUp />}/>
+            <Route path='/Messages' element={<Messages />}/>
           </Routes>
         </BrowserRouter>
       </React.StrictMode>

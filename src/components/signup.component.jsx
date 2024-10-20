@@ -1,11 +1,14 @@
 import {Button, Form} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
 
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 import '../App.css';
 
 function SignUp() {
+    const navigate = useNavigate();
+
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -31,7 +34,7 @@ function SignUp() {
         console.log(loggedInUser);
         if (loggedInUser) {
             console.log("User is logged in");
-            //navigate("/LoggedIn", {relative: "path"})
+            navigate("/Messages", {relative: "path"})
         } else {
             console.log("No user is logged in");
         }

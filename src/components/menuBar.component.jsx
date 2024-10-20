@@ -46,7 +46,7 @@ export default function MenuAppBar() {
 
   const verifyJWT = async (token) => {
     console.log("token: ", token)
-    const tokenData = await fetch('http://localhost:5000/verifyJWT', {
+    const tokenData = await fetch('http://localhost:3001/verifyJWT', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export default function MenuAppBar() {
 
   const decodeJWT = async (token) => {
     console.log("token: ", token)
-    const userData = await fetch('http://localhost:5000/decodeJWT', {
+    const userData = await fetch('http://localhost:3001/decodeJWT', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export default function MenuAppBar() {
     .then(res => res.json());
 
     console.log("does this run? ", userData);
-    setRunnerData(userData);
+    //setRunnerData(userData);
   }
 
   const handleChange = (event) => {
@@ -172,9 +172,9 @@ export default function MenuAppBar() {
                 open={Boolean(anchorE2)}
                 onClose={handleUserClose}
               >
-                <MenuItem href="../LogRun" component="a" onClick={handleUserClose}>Log Run</MenuItem>
-                <MenuItem href="../Activity" component="a" onClick={handleUserClose}>Activity</MenuItem>
-                <MenuItem href="../Settings" component="a" onClick={handleUserClose}>Settings</MenuItem>
+                <MenuItem href="../Messages" component="a" onClick={handleUserClose}>Messages</MenuItem>
+                <MenuItem href="../Requests" component="a" onClick={handleUserClose}>Requests</MenuItem>
+                <MenuItem href="../Friends" component="a" onClick={handleUserClose}>Friends</MenuItem>
               </Menu>
           </div>
           )}
