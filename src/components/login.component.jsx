@@ -66,12 +66,13 @@ function Login() {
 
 
         console.log("does this run?", userData);
-        if (userData.length === 0) {
-            console.log("No user found with those credentials")
-        } else {
+        if (userData.firstName != null) {
+            console.log("user found matching the credentials")
             setReturnedData(userData);
 
             getJWT(userData);
+        } else {
+            console.log("No user found with those credentials")
         }
         
         
@@ -104,7 +105,7 @@ function Login() {
             .then(res => res.text());
             console.log(JWT);
             cookies.set("user-authentication", JWT);
-            //navigate("/LoggedIn");
+            navigate("/Messages");
         } else {
             console.log("Username and Password Mismatch!");
         }
